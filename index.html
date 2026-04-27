@@ -22,6 +22,7 @@
         <a href="categories/yinfu.html">陰符經</a>
         <a href="categories/taiyi.html">太乙金華</a>
         <a href="about.html">關於</a>
+        <a href="index.html#contact">留言</a>
       </nav>
     </div>
   </header>
@@ -229,6 +230,51 @@
     <div style="text-align:center; margin-top:50px;">
       <a class="btn btn-cinnabar" href="archive.html">前往文章總覽</a>
     </div>
+  </section>
+
+  <div id="contact"></div>
+  <section class="contact-section">
+    <div class="label">Get in Touch</div>
+    <h2>留 言 ‧ 預 約 ‧ 諮 詢</h2>
+    <p class="lede">若有道法、修持、收驚、淨宅、祭改之諮詢,或單純想留言交流,歡迎填寫下方表單。訊息會直接寄到隨緣堂信箱(jackkok1888@gmail.com)。</p>
+    <form class="contact-form" action="https://formsubmit.co/jackkok1888@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="隨緣堂網站來信">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div>
+        <label>稱呼 / Name</label>
+        <input name="name" type="text" required>
+      </div>
+      <div>
+        <label>聯絡方式(Email 或 LINE)</label>
+        <input name="contact" type="text" required>
+      </div>
+      <div>
+        <label>性別</label>
+        <select name="gender">
+          <option value="">不便透露</option>
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+      </div>
+      <div>
+        <label>項目</label>
+        <select name="category">
+          <option value="留言交流">留言交流</option>
+          <option value="一般諮詢">一般諮詢</option>
+          <option value="收驚 / 安魂">收驚 / 安魂</option>
+          <option value="淨宅 / 開光">淨宅 / 開光</option>
+          <option value="祭改 / 補運">祭改 / 補運</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="full">
+        <label>內 容 / Message</label>
+        <textarea name="message" placeholder="請簡述您的想法或來意" required></textarea>
+      </div>
+      <button type="submit" class="full">送 出</button>
+      <div class="note">送出後將跳轉到 formsubmit 確認頁,確認後訊息即會寄達。</div>
+    </form>
   </section>
 
   <footer class="site-footer">
