@@ -776,3 +776,73 @@ img { max-width: 100%; display: block; }
 .article-body h3 { font-size: 19px; margin-top: 32px; color: var(--gold); }
 .article-body h4 { font-size: 17px; color: var(--cream); margin: 24px 0 12px; }
 .article-body blockquote { font-size: 17px; }
+
+/* ========== 照片支援(v2.1) ========== */
+/* Hero 區帶背景照片時的調整 */
+.hero[style*="background-image"] {
+  max-width: none;
+  width: 100%;
+  padding: 110px 32px 90px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll;
+  position: relative;
+  overflow: hidden;
+}
+.hero[style*="background-image"] .hero-text,
+.hero[style*="background-image"] > div {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+/* 卡片封面有背景圖時 */
+.card-cover[style*="background-image"] {
+  background-blend-mode: normal;
+}
+.card-cover[style*="background-image"]::before {
+  border-color: rgba(201,160,99,0.5);
+  opacity: 0.6;
+}
+.card:hover .card-cover[style*="background-image"] {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.card:hover .card-cover[style*="background-image"]::before {
+  opacity: 0.9;
+}
+.card-cover[style*="background-image"] .card-glyph {
+  opacity: 0.55;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.7);
+  font-size: 140px;
+}
+.card:hover .card-cover[style*="background-image"] .card-glyph {
+  opacity: 0.78;
+}
+
+/* 文章內頁頂部 banner */
+.article-banner {
+  width: 100%;
+  height: clamp(220px, 38vw, 420px);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.article-banner + article > .article-header {
+  padding-top: 60px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 720px) {
+  .hero[style*="background-image"] { padding: 80px 22px 60px; }
+  .article-banner { height: 200px; }
+  .article-banner + article > .article-header {
+    margin-top: -40px;
+    padding-top: 36px;
+  }
+}
