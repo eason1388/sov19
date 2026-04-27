@@ -810,32 +810,52 @@ img { max-width: 100%; display: block; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 22px; }
 }
 
-/* ========== Hero 帶背景照片時的版面調整 ========== */
-.hero[style*="background-image"] {
-  max-width: none;
-  width: 100%;
-  padding: 130px 32px 110px;
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: scroll;
-  position: relative;
-  overflow: hidden;
+/* ========== 全站淺色化:移除照片上的文字 ========== */
+.card-cover .cat-tag,
+.card-cover .card-glyph,
+.card-cover .cinnabar-seal {
+  display: none !important;
 }
-.hero[style*="background-image"] .hero-text,
-.hero[style*="background-image"] > div {
-  position: relative;
-  z-index: 2;
-  max-width: var(--container);
-  margin: 0 auto;
-}
-.hero[style*="background-image"] .hero-title { color: var(--cream); }
-.hero[style*="background-image"] .hero-excerpt { color: rgba(252,247,236,0.85); }
-.hero[style*="background-image"] .hero-meta { color: rgba(252,247,236,0.7); }
-.hero[style*="background-image"] .hero-eyebrow { color: var(--gold-soft); }
-.hero[style*="background-image"] .btn { color: var(--cream); border-color: var(--cream); }
-.hero[style*="background-image"] .btn:hover { background: var(--cream); color: var(--text); }
-.hero[style*="background-image"] .hero-visual { display: none; }
 
-@media (max-width: 920px) {
-  .hero[style*="background-image"] { padding: 80px 24px 70px; }
+/* 卡片照片(替代 .card-glyph 的位置,改用實照) */
+.card-cover {
+  background-size: cover;
+  background-position: center;
 }
+.card-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(45,36,25,0.06) 100%);
+  pointer-events: none;
+}
+.card:hover .card-cover {
+  filter: brightness(1.04);
+}
+
+/* Hero 視覺照片(右側) — 純照片無文字 */
+.hero-visual.has-photo {
+  background-size: cover;
+  background-position: center;
+  border: none;
+  position: relative;
+}
+.hero-visual.has-photo::before {
+  display: none;
+}
+.hero-visual.has-photo::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(252,247,236,0.5);
+  pointer-events: none;
+}
+
+/* 頂部照片橫幅(archive / about / category 上方) */
+.photo-banner {
+  width: 100%;
+  height: clamp(220px, 30vw, 360px);
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  border-botto
