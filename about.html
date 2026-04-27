@@ -26,18 +26,24 @@
     </div>
   </header>
 
-  <section class="hero" style="grid-template-columns:1fr; text-align:center; padding:90px 28px 50px; background-image: linear-gradient(170deg, rgba(45,36,25,0.45) 0%, rgba(45,36,25,0.75) 100%), url(https://picsum.photos/seed/sov15-about-page/1800/900); background-size: cover; background-position: center;">
-    <div>
-      <div class="hero-eyebrow">About　·　關於</div>
-      <h1 class="hero-title" style="max-width:720px; margin:0 auto 30px;">隨緣堂<br>道法、玄學、修行的札記之地</h1>
-      <p class="hero-excerpt" style="max-width:640px; margin:0 auto;">隨緣堂自 2018 年起,以筆記與札記的方式整理道教玄學、道法心要、修行養氣、道家經典等主題。文章以樸實口吻為主,不追求玄奇,只求一字一句皆能落到日用之上。</p>
+  <div class="photo-banner" style="background-image: url(https://picsum.photos/seed/sov15-about-page/1800/700); background-size: cover; background-position: center;"></div>
+
+  <section class="article-header" style="max-width:760px;">
+    <div class="article-eyebrow">About　·　關於</div>
+    <h1 class="article-title">隨緣堂<br>道法、玄學、修行的札記之地</h1>
+    <div class="article-meta">
+      <span>SUI YUAN TANG</span>
+      <span class="dot">·</span>
+      <span>EST. 2018</span>
     </div>
   </section>
 
-  <section class="section" style="max-width:760px;">
+  <section class="section" style="max-width:760px; padding-top:0;">
     <div class="article-divider">·　·　·</div>
 
     <div class="article-body">
+
+      <p class="lead">隨緣堂自 2018 年起,以筆記與札記的方式整理道教玄學、道法心要、修行養氣、道家經典等主題。文章以樸實口吻為主,不追求玄奇,只求一字一句皆能落到日用之上。</p>
 
       <h2>關於這個札記</h2>
       <p>此處所寫,並非授課,亦非經文逐字註解。多是十餘年道路上,對眼前所見、心中所悟、手邊所為的一些紀錄。</p>
@@ -56,11 +62,52 @@
 
       <blockquote>「道可道,非常道;名可名,非常名。」<br>—— 老子《道德經》</blockquote>
 
-      <h2>聯絡與交流</h2>
-      <p>若想交流或諮詢,可由原 GitHub 頁面留言。本札記僅以筆記方式分享,並非教義授受。</p>
-
       <p style="text-align:center; margin-top:48px; color:var(--gold); letter-spacing:1em;">— 同 道 同 行 —</p>
     </div>
+
+  <section class="contact-section">
+    <div class="label">Get in Touch</div>
+    <h2>留 言 ‧ 預 約 ‧ 諮 詢</h2>
+    <p class="lede">若有道法、修持、收驚、淨宅、祭改之諮詢,或單純想留言交流,歡迎填寫下方表單。訊息會直接寄到隨緣堂信箱(jackkok1888@gmail.com)。</p>
+    <form class="contact-form" action="https://formsubmit.co/jackkok1888@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="隨緣堂網站來信">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div>
+        <label>稱呼 / Name</label>
+        <input name="name" type="text" required>
+      </div>
+      <div>
+        <label>聯絡方式(Email 或 LINE)</label>
+        <input name="contact" type="text" required>
+      </div>
+      <div>
+        <label>性別</label>
+        <select name="gender">
+          <option value="">不便透露</option>
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+      </div>
+      <div>
+        <label>項目</label>
+        <select name="category">
+          <option value="留言交流">留言交流</option>
+          <option value="一般諮詢">一般諮詢</option>
+          <option value="收驚 / 安魂">收驚 / 安魂</option>
+          <option value="淨宅 / 開光">淨宅 / 開光</option>
+          <option value="祭改 / 補運">祭改 / 補運</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="full">
+        <label>內 容 / Message</label>
+        <textarea name="message" placeholder="請簡述您的想法或來意" required></textarea>
+      </div>
+      <button type="submit" class="full">送 出</button>
+      <div class="note">送出後將跳轉到 formsubmit 確認頁,確認後訊息即會寄達。</div>
+    </form>
+  </section>
   </section>
 
   <footer class="site-footer">
