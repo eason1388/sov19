@@ -862,4 +862,344 @@ img { max-width: 100%; display: block; }
 .photo-banner {
   width: 100%;
   height: clamp(220px, 30vw, 360px);
- 
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ========== 留言 / 聯絡表單 ========== */
+#contact { scroll-margin-top: 100px; }
+
+.contact-section {
+  max-width: var(--container-narrow);
+  margin: 80px auto 0;
+  padding: 60px 32px 80px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+  border-radius: 0;
+}
+.contact-section .label {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--cinnabar);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.contact-section h2 {
+  font-family: var(--serif-tc);
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin-bottom: 22px;
+  text-align: center;
+}
+.contact-section .lede {
+  font-family: var(--serif-tc);
+  font-size: 15px;
+  color: var(--text-soft);
+  line-height: 1.95;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.contact-form .full { grid-column: 1 / -1; }
+.contact-form label {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--serif-tc);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  font-weight: 300;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+  font-family: var(--serif-tc);
+  line-height: 1.85;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--cinnabar);
+  background: #fff;
+}
+.contact-form button {
+  font-family: var(--serif-tc);
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  color: var(--cream);
+  background: var(--text);
+  border: 1px solid var(--text);
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  justify-self: start;
+}
+.contact-form button:hover {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+.contact-form .note {
+  grid-column: 1 / -1;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.18em;
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .contact-form { grid-template-columns: 1fr; gap: 18px; }
+  .contact-section { padding: 40px 22px 60px; }
+}
+
+/* ========== 太乙金華頁:概念卡片 grid ========== */
+.taiyi-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 30px 0 50px;
+}
+.taiyi-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 30px 26px;
+}
+.taiyi-card h3 {
+  font-family: var(--serif-tc);
+  font-weight: 500;
+  color: var(--cinnabar);
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.taiyi-card p {
+  font-family: var(--serif-tc);
+  font-size: 15px;
+  color: var(--text-soft);
+  line-height: 1.95;
+  margin: 0;
+  font-weight: 300;
+}
+@media (max-width: 700px) {
+  .taiyi-card-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== 太乙金華頁面相容(原網站自訂類別) ========== */
+.taiyi-page .hero,
+.page-hero {
+  display: block;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 32px 40px;
+  text-align: center;
+  grid-template-columns: none;
+  gap: 0;
+}
+.taiyi-page .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px 40px;
+}
+.taiyi-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin: 30px 0 50px;
+}
+.taiyi-page .card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  font-family: var(--serif-tc);
+  color: var(--text);
+  line-height: 1.95;
+  font-weight: 300;
+}
+.taiyi-page .card h2,
+.taiyi-page .card h3 {
+  font-family: var(--serif-tc);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+.taiyi-page .card p { margin-bottom: 14px; color: var(--text-soft); font-size: 15px; }
+.taiyi-page .page-cta,
+.taiyi-page .page-cta-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 44px 36px;
+  margin: 50px 0;
+  text-align: center;
+}
+.taiyi-page .page-cta h2,
+.taiyi-page .page-cta-card h2 {
+  font-family: var(--serif-tc);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 18px;
+  letter-spacing: 0.06em;
+}
+.taiyi-page .page-cta p,
+.taiyi-page .page-cta-card p {
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  font-family: var(--serif-tc);
+  line-height: 1.95;
+}
+.taiyi-page .page-cta-primary,
+.taiyi-page .page-cta-secondary {
+  display: inline-block;
+  font-family: var(--serif-tc);
+  font-size: 14px;
+  letter-spacing: 0.32em;
+  padding: 12px 28px;
+  border: 1px solid var(--text);
+  margin: 6px 8px;
+  transition: all 0.3s ease;
+}
+.taiyi-page .page-cta-primary {
+  background: var(--text);
+  color: var(--cream);
+}
+.taiyi-page .page-cta-primary:hover {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+  color: var(--cream);
+}
+.taiyi-page .page-cta-secondary {
+  background: transparent;
+  color: var(--text);
+}
+.taiyi-page .page-cta-secondary:hover {
+  background: var(--text);
+  color: var(--cream);
+}
+.taiyi-page h1, .taiyi-page h2, .taiyi-page h3 {
+  font-family: var(--serif-tc);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+.taiyi-page h1 {
+  font-size: clamp(28px, 3.6vw, 42px);
+  margin-bottom: 22px;
+  text-align: center;
+}
+.taiyi-page p {
+  font-family: var(--serif-tc);
+  color: var(--text-soft);
+  line-height: 2;
+  margin-bottom: 18px;
+}
+.taiyi-page .footer-shell,
+.taiyi-page .footer-links { display: none; }
+.taiyi-page .nav-cta,
+.taiyi-page .nav-inner { display: none; }
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ========== 引言段(.lede) ========== */
+.lede {
+  font-family: var(--serif-tc);
+  font-size: 17px;
+  line-height: 1.95;
+  color: var(--text-soft);
+  margin: 0 0 24px;
+  font-weight: 400;
+}
+
+/* ========== 平滑捲動偏移(讓固定 header 不擋住錨點) ========== */
+[id] { scroll-margin-top: 100px; }
+#contact, #faq-top { scroll-margin-top: 110px; }
+
+/* ========== 太乙金華卡片網格 ========== */
+.taiyi-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 32px 0 48px;
+}
+.taiyi-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+  border-radius: 2px;
+}
+.taiyi-card h3 {
+  font-family: var(--serif-tc);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--cinnabar);
+  letter-spacing: 0.05em;
+}
+.taiyi-card p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--text-soft);
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .taiyi-card-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* ========== 留言 / 聯絡表單 ========== */
+.contact-section {
+  max-width: var(--container);
+  margin: 90px auto 80px;
+  padding: 70px 32px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--cinnabar);
+}
+.contact-section .label {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--cinnabar);
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.contact-sec
